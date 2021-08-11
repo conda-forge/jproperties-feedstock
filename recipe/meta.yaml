@@ -1,5 +1,5 @@
 {% set name = "jproperties" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jproperties-{{ version }}.tar.gz
-  sha256: 504d7b8d3b2f5f0f52c22c1f72bd50576dca17b01b4cd00d4359c6b0607a59ce
+  sha256: 40b71124e8d257e8954899a91cd2d5c0f72e0f67f1b72048a5ba264567604f29
 
 build:
   number: 0
@@ -20,11 +20,11 @@ build:
 requirements:
   host:
     - pip
-    - pytest-runner ~=2.0
-    - python >=3.6
+    - setuptools_scm ~= 3.3
+    - python 2.7|>=3.6
   run:
-    - python >=3.6
-    - six ~=1.12
+    - python 2.7|>=3.6
+    - six ~=1.13
 
 test:
   imports:
