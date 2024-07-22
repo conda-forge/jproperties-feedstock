@@ -1,5 +1,5 @@
 {% set name = "jproperties" %}
-{% set version = "2.1.1" %}
+{% set version = "2.1.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jproperties-{{ version }}.tar.gz
-  sha256: 40b71124e8d257e8954899a91cd2d5c0f72e0f67f1b72048a5ba264567604f29
+  sha256: 036fcd52c10a8a1c21e6fa2a1c292c93892e759b76490acc4809213a36ddc329
 
 build:
   number: 0
