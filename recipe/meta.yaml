@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jproperties-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jproperties-{{ version }}.tar.gz
   sha256: 036fcd52c10a8a1c21e6fa2a1c292c93892e759b76490acc4809213a36ddc329
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - propconv = jproperties:main
@@ -21,9 +21,9 @@ requirements:
   host:
     - pip
     - setuptools_scm ~= 3.3
-    - python 2.7|>=3.6
+    - python {{ python_min }}
   run:
-    - python 2.7|>=3.6
+    - python >={{ python_min }}
     - six ~=1.13
 
 test:
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Tblue/python-jproperties
